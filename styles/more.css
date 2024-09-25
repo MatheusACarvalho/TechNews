@@ -1,0 +1,80 @@
+#more {
+  padding-block-start: 0;
+  padding-block-end: 56px;
+  & .divider{
+    margin-block-end: .75rem;
+  }
+
+  & div.header-ai{
+    justify-content: space-between;
+    padding-block-end: 1.5rem;
+    & .arrow-right{
+      height: 1.5rem;
+      width: 1.5rem;
+      align-items: end;
+    }
+
+    & .header-all {
+      cursor: pointer;
+      
+      &:hover {
+        color: var(--brand-color-light);
+        stroke: var(--brand-color-light);
+      }
+
+    } 
+  }
+
+
+  & .more-container{
+    gap: 2rem;
+    & .more-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    & img{
+      width: 4.5rem;
+      height: 4.5rem;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+  
+    & span {
+      display: flex;
+      align-items: center;
+      font-size: var(--fs-sm);
+      font-weight: var(--fw-base);
+      line-height: .75rem;
+      text-transform: uppercase;
+      padding: .25rem .5rem;
+      background: #1D4ED8;
+      box-shadow: 0rem .25rem 1rem rgba(2, 6, 23, 0.25);
+      border-radius: .25rem; 
+      margin-block-end: .5rem;         
+     }
+
+    & h3 {
+      height: 2.5rem;
+      overflow: hidden;
+    } 
+
+    &  article {
+      width: 20.5rem;
+      height: 4.5rem;
+      overflow: hidden;
+     }
+  }
+
+  @media (width >= 80em) {
+   grid-area: more;
+   padding-block: 2rem;
+   width: 100%;
+
+    & .more-container{
+      &  article {
+        width: 100%;
+      }
+    }
+  }
+}

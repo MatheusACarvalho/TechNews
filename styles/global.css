@@ -16,68 +16,86 @@
   --text-color-secundary: #CBD5E1;
 
   /*Tipografia*/
-  --font-family: 'Archivo', sans-serif;
-  --h1: 800 24px/135% var(--font-family);
-  --h2: 800 16px/135% var(--font-family);
-  --h3: 800 14px/135% var(--font-family);
-  --text-span: 600 14px/145% var(--font-family);
-  --text: 400 16px/140% var(--font-family);
-  --text-sm: 14px/160% var(--font-family);
+  --ff-archivo: 'Archivo', sans-serif;
+
+  --fw-base: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+
+  --fs-sm: .625rem;
+  --fs-md: .875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.5rem;
+
+  --py-xs: 1rem;
+  --py-sm: 1rem;
+  --py-base: 2rem;
+  --py-lg: 3.5rem;
+
+  --px-base: 1rem;
+}
+
+html{
+  font-family: var(--ff-archivo);
+  font-weight: var(--fw-base);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  color: var(--text-color-secundary);
+
+  overflow-x: hidden;
 }
 
 body {
-  font: var(--text);
-  color: var(--text-color-primary);
   background-color: var(--bg-color);
+  overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+title{
+  line-height: 1.4;
+  font-weight: var(--fw-bold);
 }
 
-a:hover {
-  color: var(--brand-color-light);
-}
-
-h1, h2, h3 {
-  font: inherit;
-}
-
-img {
-  max-width: 100%;
-}
-
-.container {
-  max-width: 1280px;
-  padding-inline: 32px;
-  margin-inline: auto;
-}
-
-main {
-  margin-block: 40px;
-  row-gap: 80px;
-  column-gap: 32px;
-
-  grid-template-columns:  2fr 1.4fr;
-
-  grid-template-areas:
-  "featured featured"
-  "weekly weekly"
-  "ai aside" ;
-
-
-}
-
-.content-tag {
-
-  display: inline-block;
-  background-color: var(--brand-color-dark);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font: 500 10px/1.2 var(--font-family);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+h1 {
+  font-size: var(--fs-lg);
+  line-height: 1.35;
+  font-weight: var(--fw-extra-bold);
   color: var(--text-color-primary);
-  box-shadow: 0px 4px 16px #02061740;
+}
+
+h2 {
+  font-size: var(--fs-base);
+  line-height: 1.4;
+  font-weight: var(--fw-extra-bold);
+  color: var(--text-color-primary);
+}
+
+h3 {
+  font-size: var(--fs-md);
+  line-height: 1.4;
+  font-weight: var(--fw-extra-bold);
+  color: var(--text-color-primary);
+}
+
+p {
+  font-size: var(--fs-md);
+}
+
+span {
+  font-size: var(--fs-md);
+  line-height: 1.45;
+  font-weight: var(--fw-semi-bold);
+}
+
+@media(width >= 80em) {
+  :root {
+
+    --py-xs: .875rem;
+    --py-sm: 1.25rem;
+    --py-base: 5rem;
+    --py-lg: 5rem;
+    
+    --px-base: 2rem;
+
+  }
 }

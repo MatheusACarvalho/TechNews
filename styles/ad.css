@@ -1,0 +1,19 @@
+#ad {
+  & img {
+    width: 328px;
+    height: 188.58px;
+  }
+
+  @media (width >= 80em) {
+    grid-area: ad;
+    padding-block: 0;
+
+    width: 488px;
+    height: 280px;
+
+    & img {
+      width: 488px;
+      height: 280px;
+    }
+  }
+}

@@ -1,36 +1,74 @@
-/* utility first */
+.py-xs {
+  padding-block: var(--py-xs);
+}
+
+.py-sm {
+  padding-block: var(--py-sm);
+}
+
+.py-base {
+  padding-block: var(--py-base);
+}
+
+.py-lg {
+  padding-block: var(--py-lg);
+}
+
+.px-base {
+  padding-inline: var(--px-base);
+}
+
+.container {
+  --max-width:375px;
+  width: min(var(--max-width), 100% - var(--px-base) * 2);
+  margin-inline: auto;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
 .grid {
   display: grid;
 }
 
-.grid-flow-col {
-  grid-auto-flow: column;
+.justify-center{
+  justify-content: center;
 }
 
-.grid-cols-2 {
-  grid-template-columns: 1fr 1fr;
+.items-center {
+  align-items: center;
 }
 
-.gap-16 {
-  gap: 16px;
+.gap-1 {
+  gap: 1rem;
 }
 
-.gap-32 {
-  gap: 32px;
+.gap-0\.5{
+  gap: .5rem;
 }
 
-.text-2xl {
-  font: var(--h1);
+.border {
+  margin-inline: -6.25rem;
+  position: relative;
+  border-block: 1px solid var(--stroke-color);
 }
 
-.text-xl {
-  font: var(--h2);
+.divider {
+  border-block-end: 1px solid var(--stroke-color);
 }
 
-.text-lg {
-  font: var(--h3);
-}
+@media (width >= 80em) {
+  .container {
+    --max-width: 80rem;
+  }
 
-.text-sm {
-  font: var(--text-sm);
+  .desktop-only{
+    display: initial;
+  }
+  
 }

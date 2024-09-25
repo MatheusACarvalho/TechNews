@@ -1,0 +1,88 @@
+#highlight {
+  & .divider{
+    margin-block-end: .75rem;
+  }
+
+  & div.header-highlight{
+    justify-content: space-between;
+    padding-block-end: 1.5rem;
+    & .arrow-right{
+      height: 1.5rem;
+      width: 1.5rem;
+      align-items: end;
+    }
+
+    & .header-all {
+      cursor: pointer;
+      
+      &:hover {
+        color: var(--brand-color-light);
+        stroke: var(--brand-color-light);
+      }
+
+    } 
+  }
+
+  & .card-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+
+  & figure {
+    position: relative;
+    width: 20.5rem;
+    height: 14.625rem;
+
+    & img {
+      width: 20.5rem;
+      height: 10rem;
+    }
+
+    & span {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      font-size: var(--fs-sm);
+      font-weight: var(--fw-base);
+      line-height: .75rem;
+      text-transform: uppercase;
+      padding: .25rem .5rem;
+      background: #1D4ED8;
+      box-shadow: 0rem .25rem 1rem rgba(2, 6, 23, 0.25);
+      border-radius: .25rem;    
+    }
+
+    & h2 {
+      width: 20.5rem;
+      height: 4.125rem;
+      overflow: hidden;
+    }
+    
+
+  }
+
+  @media (width >= 80em) {
+   
+    & .card-container {
+      flex-direction: row;
+      gap: 1rem;
+    }
+    
+    & figure {
+      width: 18.25rem;
+      height: 14.625rem;
+  
+      & img {
+        width: 18.25rem;
+        height: 10rem;
+      }
+  
+      & h2 {
+        width: 18.25rem;
+        height: 4.125rem;
+      }
+  
+    }
+  }
+}
